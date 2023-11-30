@@ -26,7 +26,8 @@ public class EntityMixin {
     @Inject(method = "move", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/phys/Vec3;lengthSqr()D"))
     private void beforeResetFallDistance(MoverType p_19973_, Vec3 p_19974_, CallbackInfo ci) {
         Entity entity = (Entity) (Object) this;
-        if (!(entity instanceof WaterAnimal || entity.getType().is(BFEntityTypeTags.UNAFFECTED_BY_SURFACE_TENSION))) {
+        if (!(entity instanceof WaterAnimal || entity.getType().is(BFEntityTypeTags.UNAFFECTED_BY_SURFACE_TENSION))
+                || (!(entity instanceof Player) && BFConfig.COMMON.onlyPlayersAffected.get())) {
             if (entity.fallDistance != 0.0F && entity.collide(p_19974_).lengthSqr() >= 0.90D) {
                 BlockHitResult blockhitresult = entity.level.clip(new ClipContext(entity.position(), entity.position().add(entity.collide(p_19974_)),
                         ClipContext.Block.FALLDAMAGE_RESETTING, ClipContext.Fluid.ANY, entity));

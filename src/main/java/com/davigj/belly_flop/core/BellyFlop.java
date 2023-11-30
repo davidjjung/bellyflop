@@ -1,7 +1,10 @@
 package com.davigj.belly_flop.core;
 
+import com.davigj.belly_flop.core.data.server.BFAdvancementProvider;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
+import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -42,6 +45,10 @@ public class BellyFlop {
     }
 
     private void dataSetup(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        boolean includeServer = event.includeServer();
 
+        generator.addProvider(includeServer, new BFAdvancementProvider(generator, existingFileHelper));
     }
 }

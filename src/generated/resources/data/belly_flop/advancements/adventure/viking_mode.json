@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "viking_mode": {
+      "trigger": "belly_flop:viking_mode"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.belly_flop.adventure.viking_mode.description"
+    },
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "item": "minecraft:golden_axe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.belly_flop.adventure.viking_mode.title"
+    }
+  },
+  "requirements": [
+    [
+      "viking_mode"
+    ]
+  ]
+}
