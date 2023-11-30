@@ -1,0 +1,12 @@
+{
+  "entity.player.hurt_belly_flop": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "belly_flop:entity/belly_flop",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.belly_flop.entity.belly_flop"
+  }
+}
