@@ -1,20 +1,20 @@
 modLoader = "javafml"
 loaderVersion = "[32,)"
-issueTrackerURL = ""
+issueTrackerURL = "https://github.com/davidjjung/bellyflop/issues"
 license = "MIT License"
 
 [[mods]]
 modId = "belly_flop"
 version = "${file.jarVersion}"
 logoFile = "logo.png"
-itemIcon = "minecraft:dirt"
+itemIcon = "minecraft:water_bucket"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
-credits = ""
+credits = "DavigJ"
 displayURL = ""
 displayName = "Belly Flop"
 description = '''
-    Template Desc.
+    Fluid-based fall damage!
     '''
 
 [[dependencies.belly_flop]]

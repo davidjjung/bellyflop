@@ -1,8 +1,10 @@
 {
   "death.attack.bellyFlop": "%s belly-flopped into oblivion",
-  "death.attack.surfaceTension": "%s underestimated surface tension",
+  "death.attack.bellyFlop.player": "%1$s belly-flopped into oblivion to escape %2$s",
+  "death.attack.surfaceTension": "%s took a desolate dive",
+  "death.attack.surfaceTension.player": "%1$s took a desolate dive to escape %2$s",
 
-  "subtitles.belly_flop.entity.belly_flop": "Splashing painfully",
+  "subtitles.belly_flop.entity.belly_flop": "Smacking",
 
   "advancements.belly_flop.adventure.viking_mode.description": "Belly flop for massive damage with an axe in each hand",
   "advancements.belly_flop.adventure.viking_mode.title": "Viking Mode"
